@@ -71,6 +71,8 @@
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__person__ = __webpack_require__(4);
+
 
 
 function component() {
@@ -84,6 +86,18 @@ function component() {
 
 document.body.appendChild(component());
 
+class Friend extends __WEBPACK_IMPORTED_MODULE_1__person__["a" /* default */] {
+  constructor(name) {
+    super(name);
+  }
+  callName() {
+    alert(this.name);
+  }
+}
+
+var friend = new Friend('Ryo');
+
+friend.callName();
 
 /***/ }),
 /* 1 */
@@ -17231,6 +17245,18 @@ module.exports = function(module) {
 	return module;
 };
 
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
+}
+/* harmony default export */ __webpack_exports__["a"] = (Person);
 
 /***/ })
 /******/ ]);
